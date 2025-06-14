@@ -1,70 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brainrot Merge - Puzzle Drop Game</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #1e1e2f;
-      color: #f9f9f9;
-      line-height: 1.6;
-    }
-    header {
-      background: #292949;
-      padding: 20px 0;
-      text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    }
-    header h1 {
-      font-size: 2.5rem;
-      color: #ffffff;
-    }
-    main {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .section {
-      margin-bottom: 40px;
-    }
-    .section h2 {
-      font-size: 1.8rem;
-      margin-bottom: 10px;
-      color: #ffd700;
-    }
-    .section p {
-      font-size: 1.1rem;
-      color: #dddddd;
-    }
-    footer {
-      background: #292949;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9rem;
-      color: #aaa;
-    }
-    a {
-      color: #ffd700;
-      text-decoration: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trò Chơi Merge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+            color: #333;
+            overflow: hidden; /* Prevent body scroll */
+            padding: 20px; /* Add some padding around the whole page */
+            box-sizing: border-box;
+        }
+
+        /* Game Container for iframe */
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            max-width: 95vw; /* Responsive width */
+            width: 800px; /* Max width for desktop */
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        /* Title */
+        h1 {
+            color: #4a4a4a;
+            margin-bottom: 20px;
+            font-size: 2.5em;
+            text-align: center;
+        }
+
+        /* Iframe Styles */
+        iframe {
+            width: 100%;
+            height: 600px; /* Adjust height as needed */
+            border: none; /* Remove iframe default border */
+            border-radius: 10px;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+            background-color: #f8fafd;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            iframe {
+                height: 500px; /* Smaller height for mobile */
+            }
+            .game-container {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            iframe {
+                height: 400px; /* Even smaller height for very small screens */
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>Brainrot Merge</h1>
-  </header>
-
-  <main>
-   <iframe id="splash-game-content" frameborder="0" allow="autoplay" allowfullscreen="" seamless="" scrolling="no" src="https://html5.gamedistribution.com/5b723cee8b384026a6b978dcd019f975/?gd_sdk_referrer_url=https://merge-brainrot.com/game/brainrot-merge-drop-puzzles/"></iframe>
-    <section class="section">
-      <h2>Welcome to Brainrot Merge</h2>
+    <div class="game-container">
+        <h1>Brainrot Merge</h1>
+        <iframe src="https://html5.gamedistribution.com/5b723cee8b384026a6b978dcd019f975/?gd_sdk_referrer_url=https://merge-brainrot.com/game/brainrot-merge-drop-puzzles/"
+                title="Trò Chơi Merge">
+        </iframe>
+<h2>Welcome to Brainrot Merge</h2>
       <p>Get ready for a chaotic and colorful puzzle experience with Brainrot Merge – a drop-style game that puts your reflexes and memory to the test. Merging tiles has never been so oddly satisfying… or so bizarre!</p>
     </section>
 
@@ -86,10 +106,6 @@
       <h2>Download Now</h2>
       <p>Ready to rot your brain in the best way possible? Head over to <a href="https://apktuti.com/" target="_blank">ApkTuti.com</a> to download Brainrot Merge APK for free and start merging madness today.</p>
     </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Brainrot Merge. All rights reserved. | Hosted on GitHub Pages</p>
-  </footer>
+    </div>
 </body>
 </html>
